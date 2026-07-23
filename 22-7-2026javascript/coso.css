@@ -1,0 +1,54 @@
+:root{
+    --colorcin: beige;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: var(--colorcin);
+    --trancoso: 0.3s ease;
+}
+.ejercicio1.h1{
+    color: var(--colorcin);
+    text-align: center;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.boton{
+    border: 0px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    transition: var(--trancoso);
+}
+.boton:hover{
+    scale: 105%;
+}
+.boton:active{
+    scale: 90%;
+    opacity: 70%;
+}
+
+.inputej5{
+    border: 3px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+    transition: var(--trancoso);
+    text-align: center;
+}
+.botoncitosjuntos{
+    display: flex;
+    gap: 15px;
+}
+.inputej5:hover{
+    scale: 105%;
+}
+.inputej5:active{
+    scale: 90%;
+}
+.inputej5:focus{
+    scale: 110%;
+    border: 3px solid rgb(138, 204, 248);
+    color: rgb(73, 95, 109);
+}
