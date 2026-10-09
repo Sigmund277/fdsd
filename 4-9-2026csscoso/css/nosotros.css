@@ -1,0 +1,136 @@
+:root{
+    --transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    --bradius: 20px;
+
+}
+@import url(paletacolores.css);
+
+section{
+    display: grid;
+    gap: 20px;
+}
+
+#art1{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+
+    border: 1px solid var(--color4);
+    border-radius: var(--bradius);
+
+    gap: 10px;
+}
+#art1 img{
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+#art1 img{
+    
+    max-width: 200px;
+    min-width: 100px;
+    height: auto;
+    
+
+    transition: var(--transition);
+}
+#art1 h2, #art1 p{
+    color: var(--color10);
+}
+
+#art2 {
+    display: flex;
+    flex-wrap: wrap; /* pa q salte abajo si no hay espacio */
+    border: 1px solid var(--color4);
+    border-radius: var(--bradius);
+    padding: 20px;
+    gap: 20px; /* pa q no queden pegados cuando se pongan uno abajo del otro */
+}
+
+#art2 div {
+    flex: 1 1 300px; /* crece, se ahica y su base mínima sugerida es 300px */
+    min-width: 0;    /* esta cosa evita desbordamientos de texto dentro del flex item */
+}
+
+#art2img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#art2 img {
+    padding: 20px;
+    border-radius: calc(var(--bradius) * 2);
+    width: 100%;       /* Para que sea responsiva */
+    max-width: 450px;  /* Límite de tamaño máximo del gato */
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+#art2 ul {
+    padding-left: 30px;
+    color: var(--color10);
+}
+
+#art2 div h2 {
+    color: var(--color11);
+}
+
+#art2 div ul li h3 {
+    margin: 0;
+    border-bottom: 1px solid var(--color4);
+    padding: 10px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+
+@media (max-width: 768px) {
+    #art1 {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    #art1 img {
+        max-width: 250px;
+    }
+    #art2 div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.nosotrosmegadiv{
+    background-image: url('/images/fondorositae.jpeg');
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px;
+}
+.intcard{
+    flex: 1;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+}
+.intcard img{
+    border-radius: 20px;
+    max-height: 200px;
+    min-height: 150px;
+}
+.intcard p{
+    color: var(--color10);
+    text-shadow: 1px 2px 4px rgb(241, 14, 14);
+    font-size: 20px;
+}

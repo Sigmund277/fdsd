@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/paletacolores.css">
+    <link rel="stylesheet" href="css/maincss.css">
+    <script src="js.js" defer></script>
+    <title>Carrito</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/logoprincesapc.jpg" alt="princesaPCLogo"></a>
+        <h1>PRINCESA PC</h1>
+        <form class="searchbar" action="#" method="get">
+            <input type="text" placeholder="buscar" name="q" required>
+            <button type="submit">🔎</button>
+        </form>
+        <a href="/login.html" class="btn btn-login">👤 Ingresá</a>
+        <a href="/carrito.html" class="btn">🛒</a>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="catalogo.html">CATÁLOGO</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+            <li><a href="nosotros.html">NOSOTROS</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="contenedor-carrito">
+            <h2 style="color: var(--color7);">Tu carrito de gordicompras</h2>
+
+            <div id="lista-carrito"></div>
+
+            <div class="resumen-total">
+                <h3 style="color: var(--color7);">Total: $<span id="precio-total">0</span></h3>
+                <button onclick="vaciarCarrito()" style="border: 1px solid var(--color5); padding: 10px; border-radius: 20px; margin: 10px; color: var(--color5); background-color: var(--color2); font-size: 16px; font-weight: bold; cursor: pointer;">Vaciar Carrito</button>
+                <button style="border: 1px solid var(--color5); padding: 10px; border-radius: 20px; margin: 10px; color: var(--color5); background-color: var(--color2); font-size: 16px; font-weight: bold; cursor: pointer;">Proceder al pago</button>
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <ul>
+            <li><a href="tyc.html">Términos y condiciones</a></li>
+            <li><a href="redes.html">Redes</a></li>
+        </ul>
+    </footer>
+    <script>
+        
+    </script>
+</body>
+</html>

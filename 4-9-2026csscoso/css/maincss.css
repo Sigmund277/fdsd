@@ -1,0 +1,250 @@
+@import url('https://googleapis.com');
+
+html{
+    height: 100%;
+}
+
+
+
+
+
+:root{
+    --transition: 0.3s all ease;
+
+}
+
+@import url(paletacolores.css);
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 80px;
+    margin: 0;
+    min-height: 100vh;
+    
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 67;
+    background: color-mix(in srgb, var(--color6) 50%, transparent);
+    backdrop-filter: blur(8px);
+    color: var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+header img{
+    width: 60px;
+    height:auto;
+    gap: 10px;
+    transition: all 0.3s ease-out;
+}
+header img:hover{
+    scale: 110%;
+}
+header h1{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.searchbar {
+    margin: 0px 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 180px; /* Al ser tan chico, requiere elementos internos más compactos */
+    background-color: var(--color1);
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.searchbar input {
+    flex: 1;
+    min-width: 0; /* Mantenlo aquí */
+    padding: 8px 0px 8px 15px; /* Reducimos el padding derecho a 0 para que no empuje al botón */
+    font-size: 14px; /* Un tamaño de fuente ligeramente menor ayuda en barras compactas */
+    border: none;
+    background: transparent;
+    outline: none;
+    /* ELIMINADO: max-width: 80px (Dejemos que Flexbox decida el ancho real) */
+}
+
+.searchbar button {
+    padding: 8px 12px; /* Reducimos el espacio interno del botón para que no sature la barra */
+    background-color: var(--color2);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    transition: var(--transition);
+    white-space: nowrap;
+    display: flex; /* Ayuda a centrar perfectamente el icono de la lupa */
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar button:hover {
+    background-color: var(--color3);
+    scale: 110%;
+}
+.searchbar button:active{
+    scale: 90%;
+}
+.btn{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+    display: flex;
+    padding: 5px 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    transition: var(--transition);
+}
+.btn:hover{
+    background-color: var(--color5);
+}
+
+nav{
+    display: flex;
+    background-color: var(--color2);
+    justify-content: center;
+}
+nav ul{
+    align-items: center;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0px;
+    text-decoration: none;
+}
+nav ul a{
+    
+    text-decoration: none;
+    color: var(--color5);
+    font-weight: 500;
+    transition: var(--transition);
+}
+nav ul a:hover{
+    color: var(--color7);
+}
+main{
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto 20px auto; /* arriba derecha abajo izquierda */
+    background: color-mix(in srgb, var(--color3) 80%, transparent);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 20px;
+}
+footer{
+    display: flex;
+    background-color: var(--color2);
+    justify-content: center;
+    width: 100%;
+}
+footer ul{
+    align-items: center;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+    text-decoration: none;
+}
+footer ul a{
+    
+    text-decoration: none;
+    color: var(--color5);
+    font-weight: 500;
+    transition: var(--transition);
+}
+footer ul a:hover{
+    color: var(--color7);
+}
+
+@media (max-width: 768px) {
+    nav{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    nav ul{
+        overflow-wrap: break-word;
+    }
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+.product-item article{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid var(--color3);
+    background-color: var(--color1);
+    border-radius: 20px;
+    padding: 16px;
+}
+.product-item img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    align-self: center;
+    padding: 10px;
+    border-radius: 20px;
+}
+.product-item .price{
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color7);
+    margin-bottom: 16px;
+    margin-top: auto;
+}
+.product-item button{
+    background-color: var(--color8);
+    color: var(--color1);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    
+    transition: var(--transition);
+}
+.product-item button:hover{
+    background-color: var(--color7);
+}
+.product-item button:active{
+    background-color: var(--color8);
+    scale: 98%;
+    opacity: 60%;
+    transform: scaleY(80%);
+}
+
+.product-item h3{
+    font-size: 1.1rem;
+    margin: 12px auto;
+    text-align: center;
+}

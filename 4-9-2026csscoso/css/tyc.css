@@ -1,0 +1,35 @@
+main{
+    color: var(--color7);
+}
+ol{
+    margin: 10px;
+}
+ol li{
+    margin-top: 10px;
+}
+article{
+    display: flex;
+}
+
+.tycdiv1{
+    text-wrap: wrap;
+    flex: 3;
+}
+.tycdiv2{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+.tycdiv2 img{
+    max-width: 200px;
+    border-radius: 20px;
+}
+
+@media(max-width: 768px){
+    article{
+        display: flex;
+        flex-direction: column;
+    }
+}

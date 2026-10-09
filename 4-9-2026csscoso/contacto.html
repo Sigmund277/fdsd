@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/paletacolores.css">
+    <link rel="stylesheet" href="css/maincss.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <script src="js.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/logoprincesapc.jpg" alt="princesaPCLogo"></a>
+        <h1>PRINCESA PC</h1>
+        <form class="searchbar" action="#" method="get">
+            <input type="text" placeholder="buscar" name="q" required>
+            <button type="submit">🔎</button>
+        </form>
+        <a href="/login.html" class="btn btn-login">👤 Ingresá</a>
+        <a href="/carrito.html" class="btn">🛒</a>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="catalogo.html">CATÁLOGO</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+            <li><a href="nosotros.html">NOSOTROS</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <div class="conform">
+                <form class="gorditoformulin">
+                    <h2>Contáctanos</h2>
+                    <label for="nombre">Nombre</label>
+                    <input class="gordobotoncin" type="text" required name="nombre" id="nombre" placeholder="Escribe tu primer nombre">
+
+                    <label for="gpuname">Apellido</label>
+                    <input class="gordobotoncin" type="text" required name="apellido" id="apellido" placeholder="Escribe tu apellido">
+
+                    <label for="email">Correo electrónico (Email)</label>
+                    <input class="gordobotoncin" type="email" required name="email" id="email" placeholder="ejemplo@gmail.com">
+
+                    <label for="phonenumber">Número</label>
+                    <input class="gordobotoncin" type="tel" name="phonenumber" id="phonenumber" placeholder="+54 6767676767">
+                    
+                    
+                    <label for="motivo">Motivo de la consulta</label>
+                    <select class="gordoselectin" name="motivoconsulta" id="motivo"> 
+                        <option value="estadoenvio">Estado de mi pedido / Envío
+                        <option value="devolucion">Cambios y devoluciones
+                        <option value="dudas">Dudas sobre un producto
+                        <option value="general">Otro / General
+                        <option selected disabled hidden value="">Motivo
+                    </select> <br>
+                    <label for="comentario">Escribe tu consulta</label>
+                    <textarea name="comentario" id="comentario" rows="5" cols="67" placeholder="Describe tu inconveniencia" required></textarea>
+
+                    <div class="botonesformfinal">
+                        <button class="submitbotoncin" type="submit">Enviar</button>
+                        <button class="submitbotoncin" type="reset">Borrar datitos</button>
+                    </div>
+
+                    <button class="botonqueque" type="button">botón q explota (para sobornar a la profe)</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="tyc.html">Términos y condiciones</a></li>
+            <li><a href="redes.html">Redes</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

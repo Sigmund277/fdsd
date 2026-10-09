@@ -1,0 +1,15 @@
+.categorias h2{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: var(--color5);
+    text-shadow: 0 0 15px rgba(255, 255, 255, .099);
+
+}
+.categorias h3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--color5);
+
+}
