@@ -1,0 +1,165 @@
+:root{
+    --bradius: 20px;
+    --transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+@import url(paletacolores.css);
+
+
+
+main{
+    background: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: 0;
+    margin: auto;
+    width: fit-content;
+}
+body{
+    background: url('/images/pinksparkle2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.gorditoformulin{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 30px;
+    border: 1px solid var(--color4);
+    border-radius: var(--bradius);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    text-align: center;
+    
+
+    color: var(--color2);
+    width: 600px;
+    background-color: color-mix(in srgb, var(--color4) 50%, rgba(0, 0, 0, 0.411));
+    backdrop-filter: blur(10px);
+}
+.gorditoformulin ::placeholder{
+    color: var(--color2);
+    text-align: center;
+}
+.gorditoformulin input{
+    color: var(--color3);
+    text-align: center;
+}
+.gorditoformulin h2{
+    font-size: 22px;
+}
+.gordobotoncin{
+    width: 95%; /* para los botoncitos q ocupen todo el ancho de selección */
+    background: var(--color4);
+    border: none;
+    border-bottom: 1px solid transparent;
+    
+    padding: 10px;
+    border-radius: var(--bradius);
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    transition: var(--transition);
+}
+.gordobotoncin:active{
+    transform: scale(1.01);
+}
+.gordobotoncin:hover{
+    border-bottom: 1px solid var(--color6);
+}
+.gordobotoncin:focus{
+    transform: scale(1.05);
+    border: 1px solid #fd53ca;
+    outline:none;
+}
+
+.gorditoformulin fieldset{
+    border: 1px solid var(--color4);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.gordoselectin{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: var(--color2);
+    background: var(--color4);
+    border-radius: var(--bradius);
+    border: none;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+    width: 95%;
+    transition: var(--transition);
+}
+.gordoselectin:focus{
+    transform: scale(1.05);
+    border: 1px solid #fd53ca;
+    outline: none;
+}
+.botonesformfinal{
+    display: flex;
+    gap: 10px;
+}
+.submitbotoncin{
+    flex: 1; /* para q ocupe todo el espacio sobrante, se reparte */
+    background: linear-gradient(to top, var(--color5), var(--color4));
+    color: var(--color1);
+    border-radius: var(--bradius);
+    border: none;
+    margin: 16px 0px; /* dos valores son horizontal y vertical, un valor es para todo y cuatro para cada uno */
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.3s ease;
+}
+.submitbotoncin:hover{
+    background: linear-gradient(to right, #60d2ff, #03a3ff);
+    color: white;
+    transform: scale(1.05);
+}
+.submitbotoncin:active{
+    transform: scale(90%);
+}
+.botonqueque{
+    width: 100%;
+    background: #66b5ff;
+    color: white;
+    border-radius: var(--bradius);
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+
+    margin: 0 auto;
+
+    opacity: 1;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1); /* x1,y1 - x2,y2 */
+}
+.botonqueque:hover{
+    background: #ff7d49;
+    transform: scale(1.01);
+}
+.botonqueque:active{
+    background: #ffe13a;
+    color: transparent;
+    transform: scale(1.9);
+    opacity: 0;
+}
+
+textarea{
+    resize: none;
+    border-radius: var(--bradius);
+    padding: 10px;
+    background: var(--color4);
+    border: none;
+    outline: none;
+
+    color: var(--color2);
+    text-align: center;
+    transition: var(--transition);
+}
+textarea:hover{
+    scale: 102%;
+}
